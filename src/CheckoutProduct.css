@@ -1,0 +1,19 @@
+.checkoutProduct{
+    display: flex;
+    border: 1px solid black;
+}
+.checkoutProduct__image{
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+}
+.checkoutProduct__info > button {
+    background-color: yellow;
+    border: 1px solid;
+    color: #111;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.checkoutProduct__rating{
+    display: flex;
+}

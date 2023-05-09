@@ -1,0 +1,13 @@
+.subtotal{
+    display: flex;
+    flex-direction: column;
+   width: 300px;
+   border: 1px solid black;
+}
+.subtotal_gift{
+    background-color: yellow;
+    border: 1px solid;
+    color: #111;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
