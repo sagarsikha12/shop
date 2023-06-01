@@ -15,14 +15,19 @@ function Home() {
           <div className="home__row">
             
             <Product
-            id="123"
+              id="123"
               title="bag"
               price={11.96}
               rating={5}
               image="https://m.media-amazon.com/images/I/51sUf-LbvxL._AC_UL800_QL65_.jpg"
-            
             />
-            <Product/>
+            <Product
+              id="124"
+              title="Shoes"
+              price={29.99}
+              rating={4}
+              image="https://m.media-amazon.com/images/I/71t1sjQv2tL._AC_UL800_QL65_.jpg"
+            />
             
           </div>
           <div className="home__row">
@@ -32,13 +37,31 @@ function Home() {
               price={11.96}
               rating={5}
               image="https://m.media-amazon.com/images/I/51sUf-LbvxL._AC_UL800_QL65_.jpg"
-            
             />
-          <Product/>
-          <Product/>
+            <Product
+              id="1254"
+              title="T-Shirt"
+              price={19.99}
+              rating={3}
+              image="https://m.media-amazon.com/images/I/61zGZuOzTIL._AC_UL800_QL65_.jpg"
+            />
+            <Product
+              id="1255"
+              title="Jeans"
+              price={39.99}
+              rating={4}
+              image="https://m.media-amazon.com/images/I/71UwwaxuHIL._AC_UL800_QL65_.jpg"
+            />
           </div>
           <div className="home__row">
-          <Product/>
+            <Product
+              id="1256"
+              title="Watch"
+              price={199.99}
+              rating={5}
+              image="https://i.imgur.com/8982972.jpg"
+
+            />
           </div>
         </div>
       </div>
