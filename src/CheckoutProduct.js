@@ -1,28 +1,38 @@
-import React from 'react'
-import "./CheckoutProduct.css"
+import React from "react";
+import "./CheckoutProduct.css";
+import { useStateValue } from "./StateProvider";
 
-function CheckoutProduct() {
-  return (
+function CheckoutProduct({ id, image, title, price, rating }) {
+ const[{basket},dispatch]=useStateValue();
 
-           <div className="checkoutProduct">
-            <img src="https://m.media-amazon.com/images/I/51sUf-LbvxL._AC_UL800_QL65_.jpg" alt="" className="checkoutProduct__image" />
-            <div className="checkoutProduct__info">
-                <p className="checkoutProduct__title">
-                    "Laptop"
-                </p>
-            
-            <p className="checkoutProduct__product">
-                <small>$</small>
-                <strong>30</strong>
-            </p>
-            <div className="checkoutProduct__rating">
-                ⭐️⭐️
-            </div>
-            <button>Remove from Basket</button>
-            </div>
+
+ const removeFrombasket=()=>{
+    dispatch({
+        type:"REMOVE_FROM_BASKET",
+        id:id,
+    })
+ }
+    return (
+    <div className="checkoutProduct">
+      <img src={image} alt="" className="checkoutProduct__image" />
+      <div className="checkoutProduct__info">
+        <p className="checkoutProduct__title">{title}</p>
+
+        <p className="checkoutProduct__product">
+          <small>$</small>
+          <strong>{price}</strong>
+        </p>
+        <div className="checkoutProduct__rating">
+          {Array(rating)
+            .fill()
+            .map(() => (
+              <p>⭐️</p>
+            ))}
         </div>
-    
-  )
+        <button onClick={removeFrombasket}>Remove from Basket</button>
+      </div>
+    </div>
+  );
 }
 
-export default CheckoutProduct
+export default CheckoutProduct;

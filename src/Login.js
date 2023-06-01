@@ -13,21 +13,12 @@ function Login() {
         e.preventDefault();
         auth.signInWithEmailAndPassword(email,password)
             .then(auth=>{
-                history.push('/');
+                history('/');
             })
             .catch(error=> alert(error.message));
     }
 
-    const register=e=>{
-        e.preventDefault();
-        auth.createUserWithEmailAndPassword(email,password)
-            .then((auth)=>{
-               if(auth){
-                history.push('/');
-               }
-            })
-            .catch(error=> alert(error.message));
-    }
+  
   return (
 
     <div className="Login">
@@ -49,7 +40,10 @@ function Login() {
             <p>
             By signing in you agree to our terms and conditions.
             </p>
-            <button onClick={register} className="login__registerButton">Create your Account</button>
+            <Link to="/register" style={{textDecoration:"none"}}>
+
+            <button   className="login__registerButton">Create your Account</button>
+            </Link>
         </div>
     </div>
   )
