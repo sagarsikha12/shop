@@ -8,7 +8,7 @@ import { useStateValue } from './StateProvider';
 import { auth } from './Firebase';
 
 function Header() {
-  const [{ basket, dispatch }] = useStateValue();
+  const [{ basket}] = useStateValue();
   const [user, setUser] = useState(null);
 
   useEffect(() => {

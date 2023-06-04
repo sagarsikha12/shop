@@ -4,7 +4,7 @@ import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
 
 function Subtotal() {
-  const [{basket}, dispatch] = useStateValue();
+  const [{basket}] = useStateValue();
 
   const currencyFormatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
